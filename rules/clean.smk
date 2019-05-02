@@ -1,0 +1,1 @@
+# Most snakemake workflows have a clean rule.
