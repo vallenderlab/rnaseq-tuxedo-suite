@@ -12,5 +12,6 @@ rule all:
         # Subsequent target rules can be specified below. They should start with all_*.
 
 
+include: "rules/align.smk"
 include: "rules/other.smk"
-include: "rules/other.smk"
+include: "rules/clean.smk"
