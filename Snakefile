@@ -2,7 +2,6 @@
 # After configuring, running snakemake -n in a clone of this repository 
 # should successfully execute a dry-run of the workflow.
 
-
 configfile: "config.yaml"
 
 report: "report/workflow.rst"
