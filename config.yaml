@@ -4,5 +4,8 @@ project: "rnaseq-tuxedo"
 
 gtf: genes.gtf
 genome: GRCh38
-sample_list: samples.csv
 genome_index_base: genome
+
+samples:
+    path: path/to/samples 
+    list: samples.csv
