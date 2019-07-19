@@ -1,3 +1,7 @@
+# This configuration file should be edited to fit the user's needs.
+
+project: "rnaseq-tuxedo"
+
 gtf: genes.gtf
 genome: GRCh38
 sample_list: samples.csv
