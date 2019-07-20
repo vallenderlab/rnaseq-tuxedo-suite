@@ -9,3 +9,6 @@ genome_index_base: genome
 samples:
     path: path/to/samples 
     list: samples.csv
+    paired_end: True
+        forward: R1
+        reverse: R2
