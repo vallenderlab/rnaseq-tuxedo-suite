@@ -1,4 +1,7 @@
+import pandas as pd
 
+samples_csv = pd.read_csv(config['samples']['list'])
+SAMPLES = samples_csv['Samples'].to_list()
 
 if config['samples']['paired_end']:
     FWD = config['samples']['paired_end']['forward']
@@ -11,7 +14,8 @@ rule align_reads:
         forward=FWD,
         reverse=REV
     output:
+        expand("{project}/{sample}_tophat/", project=config['project'], sample=SAMPLES)
     conda: "envs/align.yaml"
     threads: 8
     shell:
-        "tophat -G {input.gtf} -p {threads} -o {input.sample} {input.genome} {input.forward} {input.reverse}"
+        "tophat -G {input.gtf} -p {threads} -o {output} {input.genome} {input.forward} {input.reverse}"
