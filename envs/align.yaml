@@ -3,4 +3,4 @@ channels:
   - conda-forge
 dependencies:
   - bowtie2 <=2.2.5
-  - tophat
+  - tophat ==2.1.1

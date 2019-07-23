@@ -10,12 +10,11 @@ rule assemble_transcripts:
 
 rule merge_assemblies:
     input:
-        gtf=,
-        genome=,
-        assemblies=,
+        gtf=config['gtf'],
+        genome=config['genome']
     output:
         expand("{project}/{sample}_cufflinks/assemblies.txt", project=config['project'], sample=SAMPLES)
     conda: "envs/assemble.yaml"
     threads: 8
     shell:
-        "cuffmerge -g {input.gtf} -s {input.genome} -p {threads} {input.assemblies}"
+        "cuffmerge -g {input.gtf} -s {input.genome} -p {threads} {output}"

@@ -3,7 +3,7 @@ import pandas as pd
 samples_csv = pd.read_csv(config['samples']['list'])
 SAMPLES = samples_csv['Samples'].to_list()
 
-if config['samples']['paired_end']:
+if config['samples']['paired']:
     FWD = config['samples']['paired_end']['forward']
     REV = config['samples']['paired_end']['reverse']
 

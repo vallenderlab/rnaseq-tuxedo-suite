@@ -14,5 +14,5 @@ rule all:
 
 
 include: "rules/align.smk"
-include: "rules/other.smk"
-include: "rules/clean.smk"
+include: "rules/assemble.smk"
+include: "rules/differential_expression.smk"

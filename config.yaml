@@ -5,10 +5,12 @@ project: "rnaseq-tuxedo"
 gtf: genes.gtf
 genome: GRCh38
 genome_index_base: genome
+paired: True
+runs: 4 # How many runs? i.e. MiSeq may run each sample strand 4 times
 
 samples:
     path: path/to/samples 
     list: samples.csv
-    paired_end: True
+    paired_end:
         forward: R1
         reverse: R2
