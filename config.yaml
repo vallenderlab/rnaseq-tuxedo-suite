@@ -1,16 +1,16 @@
 # This configuration file should be edited to fit the user's needs.
-
 project: "rnaseq-tuxedo"
 
 gtf: genes.gtf
 genome: GRCh38
 genome_index_base: genome
 paired: True
-runs: 4 # How many runs? i.e. MiSeq may run each sample strand 4 times
+lanes: 4 # Number of lanes per sample - L0001 = 1, L004 = 4
+project_number: 450 # Basespace project number
 
 samples:
     path: path/to/samples 
     list: samples.csv
     paired_end:
-        forward: R1
-        reverse: R2
+        read1: R1
+        read2: R2
